@@ -45,9 +45,9 @@ const Stats = props => {
         <Fragment>
             {stat ? 
                 <Fragment>
-                    {stat.error && <span className="stats">🤯 Error!</span>}
-                    {stat.isLoading && <span className="stats">🙄 Loading...</span>}
-                    {stat.downloads && <span className="stats">🤘 {stat.downloads}</span>}
+                    {stat.error ? <span className="stats">🤯 Error!</span> : ''}
+                    {stat.isLoading ? <span className="stats">🙄 Loading...</span> : ''}
+                    {stat.downloads ? <span className="stats">🤘 {stat.downloads}</span> : ''}
                 </Fragment> : ''
             }
         </Fragment>
