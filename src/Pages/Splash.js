@@ -43,12 +43,12 @@ const Stats = props => {
     const { stat } = props;
     return (
         <Fragment>
-            {stat && 
+            {stat ? 
                 <Fragment>
                     {stat.error && <span className="stats">🤯 Error!</span>}
                     {stat.isLoading && <span className="stats">🙄 Loading...</span>}
                     {stat.downloads && <span className="stats">🤘 {stat.downloads}</span>}
-                </Fragment>
+                </Fragment> : ''
             }
         </Fragment>
     );
